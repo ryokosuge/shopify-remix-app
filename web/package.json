@@ -3,7 +3,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
-    "dev": "remix dev",
+    "dev": "cross-env HOST=\"localhost\" remix dev",
     "start": "remix-serve build",
     "typecheck": "tsc -b"
   },
@@ -20,6 +20,7 @@
     "@remix-run/eslint-config": "1.9.0",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.9",
+    "cross-env": "7.0.3",
     "eslint": "8.30.0",
     "eslint-config-prettier": "8.5.0",
     "prettier": "2.8.1",
