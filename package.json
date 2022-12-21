@@ -1,0 +1,9 @@
+{
+  "name": "shopify-remix-app",
+  "version": "1.0.0",
+  "description": "shopify app with remix.",
+  "repository": "ssh://git@github.com/ryokosuge/shopify-remix-app.git",
+  "author": "ryokosuge <ryo.kosuge@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
