@@ -15,6 +15,18 @@ export const get = async (myshopifyDomain: string) => {
   });
 };
 
+export const update = async (
+  myshopifyDomain: string,
+  shop: Partial<Omit<Shop, "id" | "myshopifyDomain">>,
+) => {
+  const result = db.shop.update({
+    where: { myshopifyDomain },
+    data: { ...shop },
+  });
+  console.info(JSON.stringify(result, null, 4));
+  return result;
+};
+
 export const put = async (shop: Omit<Shop, "id">) => {
   const result = await db.shop.create({
     data: {

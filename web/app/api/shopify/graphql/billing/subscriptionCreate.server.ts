@@ -26,6 +26,10 @@ mutation AppSubscriptionCreate(
       name
       test
     }
+    userErrors {
+      field
+      message
+    }
   }
 }
 `;
