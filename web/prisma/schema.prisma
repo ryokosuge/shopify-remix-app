@@ -11,7 +11,8 @@ datasource db {
 }
 
 model Shop {
-  id              String @id @default(uuid())
-  myshopifyDomain String @unique
+  id              String  @id @default(uuid())
+  myshopifyDomain String  @unique
   accessToken     String
+  chargeId        String?
 }

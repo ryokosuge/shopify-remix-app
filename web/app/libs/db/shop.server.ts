@@ -4,6 +4,7 @@ export type Shop = {
   id: string;
   myshopifyDomain: string;
   accessToken: string;
+  chargeId?: string | null;
 };
 
 export const get = async (myshopifyDomain: string) => {
