@@ -1,6 +1,6 @@
 import { Authenticator } from "remix-auth";
 import { put } from "../db/shop.server";
-import { sessionStorage } from "./session-storage.server";
+import { sessionStorage } from "./sessionStorage.server";
 import { ShopifyStrategy } from "./strategy/shopify.server";
 import type {
   ShopifyStrategyOptions,

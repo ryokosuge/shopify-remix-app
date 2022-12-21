@@ -7,7 +7,7 @@ import type {
   ShopifyStrategyOptions,
   ShopifyStrategyVerifyCallback,
 } from "~/libs/auth/strategy/types";
-import { fetchShop } from "./fetch-shop";
+import { fetchShop } from "./fetchShop";
 
 export class ShopifyStrategy<User> extends OAuth2Strategy<
   User,
