@@ -1,4 +1,29 @@
-export default function Index() {
+import type { HeadersFunction, LoaderArgs } from "@remix-run/node";
+import { json } from "@remix-run/node";
+import type { FC } from "react";
+import { shopifyRequestMiddleware } from "~/middleware/shopifyRequestMiddleware.server";
+
+export const loader = async ({ request }: LoaderArgs) => {
+  const payload = await shopifyRequestMiddleware({ request });
+  return json(
+    {},
+    {
+      status: 200,
+      headers: {
+        "Content-Security-Policy": `frame-ancestors https://${payload.shop} https://admin.shopify.com`,
+      },
+    },
+  );
+};
+
+export const headers: HeadersFunction = ({ loaderHeaders, actionHeaders }) => ({
+  "Content-Security-Policy":
+    loaderHeaders.get("Content-Security-Policy") ??
+    actionHeaders.get("Content-Security-Policy") ??
+    "",
+});
+
+const Page: FC = () => {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Welcome to Remix</h1>
@@ -29,4 +54,6 @@ export default function Index() {
       </ul>
     </div>
   );
-}
+};
+
+export default Page;
