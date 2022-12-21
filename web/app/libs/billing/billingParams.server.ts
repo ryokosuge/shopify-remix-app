@@ -4,7 +4,7 @@ import { shopifyResourceId } from "~/utils/shopifyResourceId";
 export type BillingParamsInput = {
   myshopifyDomain: string;
   accessToken: string;
-  chargeId: string | null;
+  chargeId?: string | null;
   host: string;
 };
 

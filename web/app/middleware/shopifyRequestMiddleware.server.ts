@@ -17,6 +17,7 @@ type Payload =
       host: string;
       hasAccessToken: true;
       accessToken: string;
+      chargeId?: string | null;
     };
 
 export const shopifyRequestMiddleware = async ({
@@ -52,11 +53,12 @@ export const shopifyRequestMiddleware = async ({
     throw redirect(redirectURL.toString());
   }
 
-  const { accessToken } = s;
+  const { accessToken, chargeId } = s;
   return {
     shop,
     host,
     hasAccessToken: true,
     accessToken,
+    chargeId,
   };
 };
