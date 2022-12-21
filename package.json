@@ -5,5 +5,12 @@
   "repository": "ssh://git@github.com/ryokosuge/shopify-remix-app.git",
   "author": "ryokosuge <ryo.kosuge@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "scripts": {
+    "shopify": "shopify"
+  },
+  "devDependencies": {
+    "@shopify/app": "3.29.0",
+    "@shopify/cli": "3.29.0"
+  }
 }
