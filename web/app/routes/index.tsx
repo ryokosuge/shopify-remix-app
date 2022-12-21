@@ -1,10 +1,21 @@
 import type { HeadersFunction, LoaderArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import type { FC } from "react";
+import { shopifyAppSubscriptionMiddleware } from "~/middleware/shopifyAppSubscriptionMiddleware.server";
 import { shopifyRequestMiddleware } from "~/middleware/shopifyRequestMiddleware.server";
 
 export const loader = async ({ request }: LoaderArgs) => {
   const payload = await shopifyRequestMiddleware({ request });
+  if (payload.hasAccessToken) {
+    await shopifyAppSubscriptionMiddleware({
+      request,
+      shop: {
+        myshopifyDomain: payload.shop,
+        accessToken: payload.accessToken,
+        chargeId: payload.chargeId,
+      },
+    });
+  }
   return json(
     {},
     {
