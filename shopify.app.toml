@@ -1,0 +1,3 @@
+name = "shopify-remix-app"
+description = "shopify app with remix"
+scopes = "write_orders,write_products"
