@@ -1489,6 +1489,28 @@
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"
   integrity sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==
 
+"@shopify/app-bridge-react@3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@shopify/app-bridge-react/-/app-bridge-react-3.5.0.tgz#909319f12542cc269691d8192ef6d0cb79212e89"
+  integrity sha512-ztryM5Xf+B/gHXyGt/jY/NxoeMaQkXc9roMFZriQ7tG4gawvX968JmePPXuwZexqWYcvzzz/FpUvWwMcPHpD8w==
+  dependencies:
+    "@shopify/app-bridge" "^3.5.0"
+
+"@shopify/app-bridge-utils@3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@shopify/app-bridge-utils/-/app-bridge-utils-3.5.0.tgz#43f75136f8c65fd07274fac9b71d0085357f538d"
+  integrity sha512-yIfO/fdGBU+Ty4VZ8K7JZUGDvQCyHTwcZQVNwnappEbfuip3LprNbTbXMoyp6enJ5uOLrVVuYVQfwly7/Q3lew==
+  dependencies:
+    "@shopify/app-bridge" "^3.5.0"
+
+"@shopify/app-bridge@3.5.0", "@shopify/app-bridge@^3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@shopify/app-bridge/-/app-bridge-3.5.0.tgz#187aaa02eaf131ca52b1954ad60292921d787e66"
+  integrity sha512-T7Oe8y+EJ5zMAJ6MpI4s7bTT3YJJC/8nD8B9PUo/T4SO5OIuAxgDIMJK76INdMLd0ijuaB737n91Q70/151b5A==
+  dependencies:
+    base64url "^3.0.1"
+    web-vitals "^3.0.1"
+
 "@sindresorhus/is@^4.0.0":
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz#3c7c9c46e678feefe7a2e5bb609d3dbd665ffb3f"
@@ -2063,6 +2085,11 @@ base64-js@^1.3.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
+
+base64url@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/base64url/-/base64url-3.0.1.tgz#6399d572e2bc3f90a9a8b22d5dbb0a32d33f788d"
+  integrity sha512-ir1UPr3dkwexU7FdV8qBBbNDRUhMmIekYMFZfi+C/sLNnRESKPl23nB9b2pltqfOQNnGzsDdId90AEtG5tCx4A==
 
 base@^0.11.1:
   version "0.11.2"
@@ -7221,6 +7248,11 @@ web-streams-polyfill@^3.1.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz#71c2718c52b45fd49dbeee88634b3a60ceab42a6"
   integrity sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==
+
+web-vitals@^3.0.1:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-3.1.0.tgz#a6f5156cb6c7fee562da46078540265ac2cd2d16"
+  integrity sha512-zCeQ+bOjWjJbXv5ZL0r8Py3XP2doCQMZXNKlBGfUjPAVZWokApdeF/kFlK1peuKlCt8sL9TFkKzyXE9/cmNJQA==
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
