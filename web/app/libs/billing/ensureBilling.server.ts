@@ -2,7 +2,6 @@ import type {
   AppPricingIntervalType,
   AppSubscriptionCurrencyCodeType,
 } from "~/api/shopify/graphql/billing/types";
-import type { Input } from "~/api/shopify/graphql/post.server";
 import { appActiveSubscriptions } from "~/api/shopify/graphql/billing/activeSubscriptions.server";
 import { appSubscriptionCreate } from "~/api/shopify/graphql/billing/subscriptionCreate.server";
 
