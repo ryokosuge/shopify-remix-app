@@ -38,7 +38,7 @@ export const shopifyAppSubscriptionMiddleware = async ({
     host,
   });
 
-  const [hasActiveSubscription] = await ensureBilling({
+  const [hasActiveSubscription, confirmationUrl] = await ensureBilling({
     billingDetail: { resourceID, returnUrl, ...AppBillingSetting },
     myshopifyDomain,
     accessToken,
@@ -47,7 +47,6 @@ export const shopifyAppSubscriptionMiddleware = async ({
 
   if (!hasActiveSubscription) {
     // 課金情報ないので認証ルートへ
-    const redirectPath = `/auth?${searchParams}`;
-    throw redirect(redirectPath);
+    throw redirect(confirmationUrl);
   }
 };
